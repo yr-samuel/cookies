@@ -34,11 +34,9 @@ app.get("/same-site-none", (_, response) => {
         path: '/',
         httpOnly: true,
         secure: true,
-        domain: '.s3.us-east-1.amazonaws.com',
+        domain: 's3.us-east-1.amazonaws.com',
         sameSite: 'none'
     });
-
-    // response.setHeader('Access-Control-Allow-Origin', 'https://front-cookies.s3.us-east-1.amazonaws.com/');
 
     response.json({ data: 'same-site-none' });
 });
