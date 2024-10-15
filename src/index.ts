@@ -26,7 +26,7 @@ app.get("/same-site-lax", (_, response) => {
         sameSite: 'lax'
     });
 
-    response.redirect(302, 'yr-samuel.github.io')
+    response.redirect(302, 'https://yr-samuel.github.io')
 });
 
 app.get("/same-site-none", (_, response) => {
@@ -34,7 +34,7 @@ app.get("/same-site-none", (_, response) => {
         path: '/',
         httpOnly: true,
         secure: true,
-        domain: '.github.io',
+        domain: 'yr-samuel.github.io',
         sameSite: 'none'
     });
 
