@@ -34,7 +34,7 @@ app.get("/same-site-none", (_, response) => {
         path: '/',
         httpOnly: true,
         secure: true,
-        domain: 's3.us-east-1.amazonaws.com',
+        domain: 'onrender.com',
         sameSite: 'none'
     });
 
