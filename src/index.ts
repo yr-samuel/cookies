@@ -23,15 +23,15 @@ app.get("/same-site-lax", (_, response) => {
         path: '/',
         httpOnly: true,
         secure: true,
-        domain: 'any',
+        domain: 'localhost',
         sameSite: 'lax'
     });
 
     response.json({ data: 'same-site-lax' });
 });
 
-app.get("/same-site-lax", (_, response) => {
-    response.cookie('same-site', 'lax', {
+app.get("/same-site-none", (_, response) => {
+    response.cookie('same-site', 'none', {
         path: '/',
         httpOnly: true,
         secure: true,
