@@ -9,7 +9,7 @@ app.use(cors({ credentials: true }));
 app.get("/index", (_, response: Response) => {
     response.cookie('cookie', 'cookie', {
         expires: new Date(Date.now() + 900_000),
-        domain: 'localhost',
+        // domain: 'localhost',
         path: '/',
         httpOnly: true,
         secure: true,
