@@ -26,7 +26,7 @@ app.get("/same-site-lax", (_, response) => {
         sameSite: 'lax'
     });
 
-    response.redirect(302, 'localhost:3001')
+    response.redirect(302, 'yr-samuel.github.io')
 });
 
 app.get("/same-site-none", (_, response) => {
@@ -34,7 +34,7 @@ app.get("/same-site-none", (_, response) => {
         path: '/',
         httpOnly: true,
         secure: true,
-        domain: '.local-credentialless.webcontainer.io',
+        domain: '.github.io',
         sameSite: 'none'
     });
 
