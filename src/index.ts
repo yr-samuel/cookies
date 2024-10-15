@@ -1,5 +1,6 @@
 import express, { Response } from "express";
 import cors from "cors";
+import { PORT } from "./settings";
 
 const app = express();
 
@@ -12,9 +13,9 @@ app.get("/index", (_, response: Response) => {
         path: '/',
         httpOnly: true,
         secure: true,
-        sameSite: 'none'
+        sameSite: 'strict'
     });
-    
+
     response.json({ data: 1});
 });
 
@@ -22,6 +23,6 @@ app.get('/hc', (_, response) => {
     response.json({ is: 'working'})
 })
 
-app.listen(8000, () => {    
+app.listen(PORT, () => {    
     console.log("tamo rodando na porta 8080")
 });
