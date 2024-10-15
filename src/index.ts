@@ -34,7 +34,7 @@ app.get("/same-site-none", (_, response) => {
         path: '/',
         httpOnly: true,
         secure: true,
-        domain: '.webcontainer.io',
+        domain: '.local-credentialless.webcontainer.io',
         sameSite: 'none'
     });
 

@@ -30,4 +30,4 @@
 
 Considerações:
 - Se o atributo SameSite estiver definido como `Strict`, e o atributo `Domain` estiver configurado com um domínio diferente do que criou o cookie, o cookie não estará disponível nem mesmo para o próprio domínio. Isso significa que o cookie será restrito e não poderá ser acessado em nenhuma circunstância.
-- Se o atributo SameSite estiver configurado como `Lax`, para que o cookie seja persistido no lado do cliente, a interação do usuário (como clicar em um link) deve resultar em uma navegação para o mesmo domínio especificado no atributo Domain do cookie, ou para um subdomínio desse domínio.
+- Se o atributo SameSite estiver configurado como `Lax`, para que o cookie seja persistido no lado do cliente (via cross-origin), a interação do usuário (como clicar em um link) deve resultar em uma navegação para o mesmo domínio especificado no atributo Domain do cookie, ou para um subdomínio desse domínio.
