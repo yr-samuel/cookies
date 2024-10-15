@@ -34,7 +34,7 @@ app.get("/same-site-none", (_, response) => {
         path: '/',
         httpOnly: true,
         secure: true,
-        domain: 'stackblitz.com',
+        domain: '.webcontainer.io',
         sameSite: 'none'
     });
 
