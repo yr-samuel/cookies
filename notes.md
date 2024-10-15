@@ -26,3 +26,7 @@
 
 ## 5. Prioridade dos Cookies
 - Se um cookie é enviado pelo servidor com a flag HttpOnly, esse cookie prevalecerá.
+
+
+Anotações:
+- Se o atributo SameSite estiver definido como `Strict`, e o atributo `Domain` estiver configurado com um domínio diferente do que criou o cookie, o cookie não estará disponível nem mesmo para o próprio domínio. Isso significa que o cookie será restrito e não poderá ser acessado em nenhuma circunstância.
