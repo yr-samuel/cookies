@@ -34,7 +34,7 @@ app.get("/same-site-none", (_, response) => {
         path: '/',
         httpOnly: true,
         secure: true,
-        domain: 'onrender.com',
+        domain: 'github.io',
         sameSite: 'none'
     });
     response.setHeader('Access-Control-Allow-Origin', 'https://yr-samuel.github.io');
