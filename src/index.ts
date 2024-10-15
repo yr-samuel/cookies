@@ -22,7 +22,7 @@ app.get("/same-site-lax", (_, response) => {
     response.cookie('same-site', 'lax', {
         path: '/',
         httpOnly: true,
-        domain: 'localhost',
+        domain: '.github.io',
         sameSite: 'lax'
     });
 
