@@ -37,7 +37,7 @@ app.get("/same-site-none", (_, response) => {
         domain: 'onrender.com',
         sameSite: 'none'
     });
-
+    response.setHeader('Access-Control-Allow-Origin', 'https://yr-samuel.github.io');
     response.json({ data: 'same-site-none' });
 });
 
