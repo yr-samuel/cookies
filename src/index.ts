@@ -26,7 +26,7 @@ app.get("/same-site-lax", (_, response) => {
         sameSite: 'lax'
     });
 
-    response.redirect(302, 'https://yr-samuel.github.io')
+    response.redirect(302, 'https://yr-samuel.github.io/cookies-front')
 });
 
 app.get("/same-site-none", (_, response) => {
