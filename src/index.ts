@@ -26,7 +26,7 @@ app.get("/same-site-lax", (_, response) => {
         sameSite: 'lax'
     });
 
-    response.json({ data: 'same-site-lax' });
+    response.redirect(302, 'localhost:3001')
 });
 
 app.get("/same-site-none", (_, response) => {
@@ -34,7 +34,7 @@ app.get("/same-site-none", (_, response) => {
         path: '/',
         httpOnly: true,
         secure: true,
-        domain: 'any',
+        domain: 'stackblitz.com',
         sameSite: 'none'
     });
 
