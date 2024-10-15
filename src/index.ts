@@ -34,7 +34,7 @@ app.get("/same-site-none", (_, response) => {
         path: '/',
         httpOnly: true,
         secure: true,
-        domain: 'yr-samuel.github.io',
+        // domain: 'yr-samuel.github.io',
         sameSite: 'none'
     });
 
