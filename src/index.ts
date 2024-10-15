@@ -22,7 +22,6 @@ app.get("/same-site-lax", (_, response) => {
     response.cookie('same-site', 'lax', {
         path: '/',
         httpOnly: true,
-        secure: true,
         domain: 'localhost',
         sameSite: 'lax'
     });
