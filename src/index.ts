@@ -6,17 +6,40 @@ const app = express();
 
 app.use(cors({ credentials: true }));
 
-app.get("/index", (_, response: Response) => {
-    response.cookie('cookie', 'cookie', {
+app.get("/same-site-strict", (_, response) => {
+    response.cookie('same-site', 'strict', {
         expires: new Date(Date.now() + 900_000),
-        // domain: 'localhost',
         path: '/',
         httpOnly: true,
         secure: true,
         sameSite: 'strict'
     });
 
-    response.json({ data: 1});
+    response.json({ data: 'same-site-strict' });
+});
+
+app.get("/same-site-lax", (_, response) => {
+    response.cookie('same-site', 'lax', {
+        path: '/',
+        httpOnly: true,
+        secure: true,
+        domain: 'any',
+        sameSite: 'lax'
+    });
+
+    response.json({ data: 'same-site-lax' });
+});
+
+app.get("/same-site-lax", (_, response) => {
+    response.cookie('same-site', 'lax', {
+        path: '/',
+        httpOnly: true,
+        secure: true,
+        domain: 'any',
+        sameSite: 'none'
+    });
+
+    response.json({ data: 'same-site-none' });
 });
 
 app.get('/hc', (_, response) => {
