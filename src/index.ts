@@ -34,7 +34,7 @@ app.get("/same-site-none", cors({ origin: 'https://cookies-front.onrender.com'})
         path: '/',
         httpOnly: true,
         secure: true,
-        domain: '.onrender.com',
+        domain: 'cookies-front.onrender.com',
         sameSite: 'none'
     });
     // response.setHeader('Access-Control-Allow-Origin', 'https://yr-samuel.github.io');
