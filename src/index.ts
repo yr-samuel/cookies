@@ -29,7 +29,7 @@ app.get("/same-site-lax", (_, response) => {
     response.redirect(302, 'https://yr-samuel.github.io/cookies-front/')
 });
 
-app.get("/same-site-none", cors({ origin: 'https://cookies-front.onrender.com'}), (_, response) => {
+app.get("/same-site-none", (_, response) => {
     response.cookie('same-site', 'value', {
         path: '/',
         httpOnly: true,
