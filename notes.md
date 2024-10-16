@@ -21,7 +21,7 @@
 - **HttpOnly**: Se **true**, o cookie estará disponível apenas através de chamadas HTTP, não podendo ser lido ou escrito pelo lado do cliente, mas acompanhando as requisições.
 - **SameSite**: Define como o cookie é enviado em requisições:
   - **Strict**: O cookie é enviado apenas em requisições do mesmo origin.
-  - **Lax**: O cookie é enviado em interações de clique e submissões de formulários GET, mas não em requisições cross-origin, como POST, iframe, ou XMLHttpRequest/fetch.
+  - **Lax**: O cookie é enviado em interações de clique e submissões de formulários GET, mas não em requisições cross-origin, como POST, iframe, ou XMLHttpRequest/fetch, agora se fosse mesma origin outros tipos de requisições são possíveis.
   - **None**: O cookie é sempre enviado, mesmo em requisições cross-origin, mas precisa ter o parâmetro Secure como **true**.
 
 ## 5. Prioridade dos Cookies
@@ -31,3 +31,4 @@
 Considerações:
 - Se o atributo SameSite estiver definido como `Strict`, e o atributo `Domain` estiver configurado com um domínio diferente do que criou o cookie, o cookie não estará disponível nem mesmo para o próprio domínio. Isso significa que o cookie será restrito e não poderá ser acessado em nenhuma circunstância.
 - Se o atributo SameSite estiver configurado como `Lax`, para que o cookie seja persistido no lado do cliente (via cross-origin), a interação do usuário (como clicar em um link) deve resultar em uma navegação para o mesmo domínio especificado no atributo Domain do cookie, ou para um subdomínio desse domínio.
+- Se o SameSite não for definido, o cookie é tratado como `Lax` por padrão.

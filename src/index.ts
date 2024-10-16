@@ -29,15 +29,15 @@ app.get("/same-site-lax", (_, response) => {
     response.redirect(302, 'https://yr-samuel.github.io/cookies-front/')
 });
 
-app.get("/same-site-none", (_, response) => {
+app.get("/same-site-none", cors({ origin: 'https://cookies-front.onrender.com/'}), (_, response) => {
     response.cookie('same-site', 'none', {
         path: '/',
         httpOnly: true,
         secure: true,
-        domain: 'github.io',
+        domain: '.onrender.com',
         sameSite: 'none'
     });
-    response.setHeader('Access-Control-Allow-Origin', 'https://yr-samuel.github.io');
+    // response.setHeader('Access-Control-Allow-Origin', 'https://yr-samuel.github.io');
     response.json({ data: 'same-site-none' });
 });
 
