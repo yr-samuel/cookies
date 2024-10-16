@@ -35,7 +35,7 @@ app.get("/same-site-none", (_, response) => {
         httpOnly: true,
         secure: true,
         maxAge: 86000,
-        domain: 'cookies-front.onrender.com',
+        domain: '.onrender.com',
         sameSite: 'none'
     });
     // response.setHeader('Access-Control-Allow-Origin', 'https://yr-samuel.github.io');
