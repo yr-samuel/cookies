@@ -34,6 +34,7 @@ app.get("/same-site-none", (_, response) => {
         path: '/',
         httpOnly: true,
         secure: true,
+        maxAge: 160,
         domain: 'cookies-front.onrender.com',
         sameSite: 'none'
     });
