@@ -30,7 +30,7 @@ app.get("/same-site-lax", (_, response) => {
 });
 
 app.get("/same-site-none", cors({ origin: 'https://cookies-front.onrender.com'}), (_, response) => {
-    response.cookie('same-site', 'none', {
+    response.cookie('same-site', 'value', {
         path: '/',
         httpOnly: true,
         secure: true,
